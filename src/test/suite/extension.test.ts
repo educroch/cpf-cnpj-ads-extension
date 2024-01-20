@@ -1,6 +1,6 @@
 import * as assert from 'assert';
-
 import * as vscode from 'vscode';
+
 import * as helper from '../../cpf-cnpj-helper';
 
 suite('Teste de limpeza de formatação para CPF.', () => {
@@ -62,6 +62,38 @@ suite('Teste de limpeza de formatação para CNPJ.', () => {
 		},(err) => {
 			assert(err instanceof Error);
 			assert.strictEqual(err.message, 'Número de CNPJ está inválido.');
+			return true;
+		});
+	});
+});
+
+suite('Teste de formatação de CPF.', () => {
+	vscode.window.showInformationMessage('Iniciando todos os testes de formatação de CPF.');
+
+	test('Deve formatar CPF, quanto número for válido.', () => {
+		const cpf = '86865945069';
+		const cpfFormatado = helper.formatarDocumento(cpf);
+		assert.strictEqual(cpfFormatado, '868.659.450-69');
+	});
+
+	test('Deve retornar Error, quanto tamanho do número (CPF) for inválido.', () => {
+		const cpf = '100065945069';
+		assert.throws(() => {
+			helper.formatarDocumento(cpf);
+		}, (err) => {
+			assert(err instanceof Error);
+			assert.strictEqual(err.message, 'Tamanho inválido para um documento.');
+			return true;
+		});
+	});
+
+	test('Deve retornar Error, quanto número do CPF for inválido.', () => {
+		const cpf = '12345678912';
+		assert.throws(() => {
+			helper.formatarDocumento(cpf);
+		}, (err) => {
+			assert(err instanceof Error);
+			assert.strictEqual(err.message, 'Número de CPF inválido.');
 			return true;
 		});
 	});

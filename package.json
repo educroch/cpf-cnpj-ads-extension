@@ -20,11 +20,18 @@
 			{
 				"command": "cpfcnpjextension.removerFormatacao",
 				"title": "Remover Formatação do Documento."
+			},{
+				"command": "cpfcnpjextension.formatarDocumento",
+				"title": "Formatar Documento."
 			}
 		],
 		"keybindings": [
 			{
 				"command": "cpfcnpjextension.removerFormatacao",
+				"key": "f3"
+			},
+			{
+				"command": "cpfcnpjextension.formatarDocumento",
 				"key": "Alt+f3"
 			}
 		]
