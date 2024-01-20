@@ -36,7 +36,7 @@ suite('Teste de limpeza de formatação para CPF.', () => {
 });
 
 suite('Teste de limpeza de formatação para CNPJ.', () => {
-	vscode.window.showInformationMessage('Iniciando todos os testesd de limpeza de formatação do CNPJ.');
+	vscode.window.showInformationMessage('Iniciando todos os testes de limpeza de formatação do CNPJ.');
 
 	test('Deve retornar CNPJ sem formatação, quanto CNPJ for válido.', () => {
 		const cnpj = '58.182.141/0001-52';
@@ -94,6 +94,38 @@ suite('Teste de formatação de CPF.', () => {
 		}, (err) => {
 			assert(err instanceof Error);
 			assert.strictEqual(err.message, 'Número de CPF inválido.');
+			return true;
+		});
+	});
+});
+
+suite('Teste de formatação de CNPJ.', () => {
+	vscode.window.showInformationMessage('Iniciando todos os testes de formatação de CNPJ.');
+
+	test('Deve formatar CNPJ, quanto CNPJ for válido.', () => {
+		const cnpj = '58182141000152';
+		const cnpjFormatado = helper.formatarDocumento(cnpj);
+		assert.strictEqual(cnpjFormatado, '58.182.141/0001-52');
+	});
+
+	test('Deve retornar Error, quanto tamanho do CNPJ for inválido.', () => {
+		const cnpj = '158.182.141/0001-52';
+		assert.throws(() => {
+			helper.formatarDocumento(cnpj);
+		}, (err) => {
+			assert(err instanceof Error);
+			assert.strictEqual(err.message, 'Tamanho inválido para um documento.');
+			return true;
+		});
+	});
+
+	test('Deve retornar Error, quanto CNPJ for inválido.', () => {
+		const cnpj = '12.123.456/0000-12';
+		assert.throws(() => {
+			helper.formatarDocumento(cnpj);
+		},(err) => {
+			assert(err instanceof Error);
+			assert.strictEqual(err.message, 'Número de CNPJ está inválido.');
 			return true;
 		});
 	});
