@@ -18,13 +18,13 @@
 	"contributes": {
 		"commands": [
 			{
-				"command": "cpfcnpjextension.removerFormatacaoCpf",
-				"title": "Remover Formatação do CPF."
+				"command": "cpfcnpjextension.removerFormatacao",
+				"title": "Remover Formatação do Documento."
 			}
 		],
-		"keybindings":[
+		"keybindings": [
 			{
-				"command": "cpfcnpjextension.removerFormatacaoCpf",
+				"command": "cpfcnpjextension.removerFormatacao",
 				"key": "Alt+f3"
 			}
 		]
@@ -39,17 +39,20 @@
 		"proposedapi": "node installTypings.js"
 	},
 	"devDependencies": {
-		"@types/vscode": "^1.39.0",
 		"@types/azdata": "*",
 		"@types/glob": "^7.1.4",
 		"@types/mocha": "^9.0.0",
 		"@types/node": "^13.11.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.30.0",
+		"@types/vscode": "^1.39.0",
 		"@typescript-eslint/eslint-plugin": "^2.30.0",
+		"@typescript-eslint/parser": "^2.30.0",
+		"azdata-test": "^1.x",
+		"eslint": "^6.8.0",
 		"glob": "^7.1.7",
 		"mocha": "^9.1.0",
-		"typescript": "^4.3.5",
-		"azdata-test": "^1.x"
+		"typescript": "^4.3.5"
+	},
+	"dependencies": {
+		"cpf-cnpj-validator": "^1.0.3"
 	}
 }
