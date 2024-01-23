@@ -1,13 +1,18 @@
-# README
-## This is the README for your extension "cpfcnpjextension"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# CPF / CNPJ Azure Data Studio Extension
+Extensão para Azure Data Studio com o objetivo de trabalhar com CPF e CNPJ.
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## Funcionalidades
+Possui as seguintes funcionalidades ao selecionar um texto no editor de queries:
 
-**Enjoy!**
+1. Remove formatação de documentos (CPF/CNPJ);
+2. Adiciona formatação de documentos (CPF/CNPJ);
+3. Durante estas operações, também é feita uma validação utilizando a lib [cpf-cnpj-validator](https://github.com/carvalhoviniciusluiz/cpf-cnpj-validator)
+
+## Contribuidores
+
+* Eduardo Cogo da Rocha [GitHub](https://github.com/educroch) | 
+
+## Licença
+
+[MIT](http://opensource.org/licenses/MIT)

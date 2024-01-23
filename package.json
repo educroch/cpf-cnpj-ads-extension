@@ -1,9 +1,9 @@
 {
 	"name": "cpfcnpjextension",
-	"displayName": "CpfCnpjExtension",
-	"description": "Formatação de CPF e CNPJ.",
-	"publisher": "EduardoCogoRocha",
-	"version": "0.0.1",
+	"displayName": "CPF / CNPJ Extension",
+	"description": "Formatação e remoção de formatação de CPF e CNPJ.",
+	"publisher": "Eduardo Cogo da Rocha",
+	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.39.0",
 		"azdata": "*"
