@@ -1,0 +1,42 @@
+name: Criar Release
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  create-release:
+    name: Criar release
+    runs-on: windows-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Configurar o node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21.x
+
+      - name: Instalação das dependências
+        run: |
+          npm install -g @vscode/vsce
+          npm install -g yarn
+          yarn install
+
+      - name: Gerar o pacote
+        run: vsce package
+
+      - name: Obter a Versão do package.json
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
+      
+      - name: Criar o Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "*.vsix"
+          allowUpdates: true
+          artifactErrorsFailBuild: true
+          tag: ${{ steps.package-version.outputs.current-version}}
