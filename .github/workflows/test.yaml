@@ -1,0 +1,31 @@
+name: Compilação e Execução dos Testes
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-build:
+    name: Compilar e Testar
+    runs-on: windows-latest
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      - name: Configurar o node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 21.x
+
+      - name: Instalação das dependências
+        run: |
+          npm install -g yarn
+          yarn install
+
+      - name: Compilar e Testar
+        run: |
+          yarn compile
+          yarn test
