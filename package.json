@@ -11,9 +11,11 @@
 	"categories": [
 		"Other"
 	],
-	"activationEvents": [
-		"onCommand:cpfcnpjextension.removerFormatacaoCpf"
-	],
+	"activationEvents": [],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/educroch/cpf-cnpj-ads-extension"
+    },
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
