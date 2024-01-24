@@ -7,7 +7,7 @@ on:
 jobs:
   create-release:
     name: Criar release
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: write
     
