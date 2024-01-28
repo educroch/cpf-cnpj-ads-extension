@@ -3,6 +3,8 @@
 	"displayName": "CPF / CNPJ Extension",
 	"description": "Formatação e remoção de formatação de CPF e CNPJ.",
 	"publisher": "Eduardo Cogo da Rocha",
+	"license": "MIT",
+	"icon": "resources/imgs/logo.png",
 	"version": "1.0.0",
 	"engines": {
 		"vscode": "^1.39.0",
@@ -17,6 +19,7 @@
         "url": "https://github.com/educroch/cpf-cnpj-ads-extension"
     },
 	"main": "./out/extension.js",
+	"homepage": "https://github.com/educroch/cpf-cnpj-ads-extension",
 	"contributes": {
 		"commands": [
 			{
