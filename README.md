@@ -1,4 +1,4 @@
-[![Bandeira do Brasil](resources/imgs/flgBrasil.png) Português](#leia-me) | [![USA flag](resources/imgs/flgUsa.png) English](#readme)
+[![Bandeira do Brasil](https://raw.githubusercontent.com/educroch/cpf-cnpj-ads-extension/master/resources/imgs/flgBrasil.png) Português](#leia-me) | [![USA flag](https://raw.githubusercontent.com/educroch/cpf-cnpj-ads-extension/master/resources/imgs/flgUsa.png) English](#readme)
 
 # Leia-me
 
@@ -15,7 +15,7 @@ Possui as seguintes funcionalidades ao selecionar um texto no editor de queries:
 
 ### 🎞️ Demonstração
 
-![Demonstração](resources/screenshots/demo.gif)
+![Demonstração](https://raw.githubusercontent.com/educroch/cpf-cnpj-ads-extension/master/resources/screenshots/demo.gif)
 
 ### ⚙️ Instalação
 
@@ -51,7 +51,7 @@ It has the following features when selecting text in the query editor:
 
 ### 🎞️ Demo
 
-![Demo](resources/screenshots/demo.gif)
+![Demo](https://raw.githubusercontent.com/educroch/cpf-cnpj-ads-extension/master/resources/screenshots/demo.gif)
 
 ### ⚙️ Installation
 
